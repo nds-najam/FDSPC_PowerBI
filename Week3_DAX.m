@@ -47,6 +47,19 @@ LEFT/RIGHT(Text, [numChars])
 # ALL removes all the filters: ALL (<TableNameOrColumnName1>,<TableNameOrColumnName2>,...)
 # 
 # 
+Total Sales (lamps) = 
+CALCULATE(
+    [Total Sales],'Products Sheet'[Product Name] = "Table lamps"
+)
+
+Percentage Contribution of table lamp = 
+DIVIDE(
+    [Total Sales (lamps)],
+    CALCULATE(
+        [Total Sales (lamps)],
+        ALL('Store Locations Sheet'[State])
+    ),0
+)
 
 
 
