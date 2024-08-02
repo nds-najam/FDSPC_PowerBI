@@ -61,7 +61,33 @@ DIVIDE(
     ),0
 )
 
+Table lamp orders = 
+CALCULATE(
+    [numOrders],'Products Sheet'[Product Name] = "Table lamps"
+)
 
+Table lamp orders (high margin) = 
+CALCULATE(
+    [numOrders],
+    FILTER('Sales Orders Sheet',[Net Profit Margin] > 0.5),
+    'Products Sheet'[Product Name] = "Table lamps"
+)
+
+% of high margin table lamp orders = 
+DIVIDE(
+    [Table lamp orders (high margin)],
+    [Table lamp orders],
+    0
+)
+
+
+Average Order Value = AVERAGE('Sales Orders Sheet'[Sales Amount])
+
+Overall avg order value = 
+CALCULATE(
+    [Average Order Value],
+    ALL('Products Sheet'[Product Name])
+)
 
 
 
