@@ -15,3 +15,12 @@ DIVIDE(
 )
 RETURN _NetProfit
 
+#
+# Logical Functions
+#
+IF(Condition, Value_if_True, Value_if_False)
+AND(Condition-1, Condition-2)
+OR(Condition-1, Condition-2)
+Logical_OR = IF(Condition1|| Condition2||Condition3||...||ConditionN, Value_if_any_one_is_true, Value_if_none_is_true)
+Logical_AND = IF(Condition1|| Condition2||Condition3||...||ConditionN, Value_all_are_true, Value_if_none_is_False)
+
