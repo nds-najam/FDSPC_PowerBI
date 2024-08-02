@@ -111,6 +111,27 @@ ADDCOLUMNS(
     "Week of Year", WEEKNUM([Date])
 )
 
+Current sales =
+TOTALMTD(
+    SUM(Sales[Sales Amount]),
+    'Calendar Table'[Date].[Date]
+)
+Current vs Last month saes =
+DIVIDE(
+    [Current sales] - [Last Month Sales MTD],
+    [Last Month Sales MTD],
+    0
+)
+
+Last Month Sales MTD =
+
+CALCULATE(
+    SUM(Sales[Sales Amount]),
+    PREVIOUSMONTH(DATESMTD('Calendar Table'[Date]))
+)
+
+
+
 
 
 
