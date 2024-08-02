@@ -24,3 +24,12 @@ OR(Condition-1, Condition-2)
 Logical_OR = IF(Condition1|| Condition2||Condition3||...||ConditionN, Value_if_any_one_is_true, Value_if_none_is_true)
 Logical_AND = IF(Condition1|| Condition2||Condition3||...||ConditionN, Value_all_are_true, Value_if_none_is_False)
 
+#
+# Check if a product is electronic
+#
+Electronics (Y/N) = IF('Products Sheet'[Product Name] = "computers"
+                        || 'Products Sheet'[Product Name] = "TV and video"
+                        || 'Products Sheet'[Product Name] = "phones"
+                        || 'Products Sheet'[Product Name] = "Audio",
+                        "Y","N")
+
