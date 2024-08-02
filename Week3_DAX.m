@@ -89,7 +89,27 @@ CALCULATE(
     ALL('Products Sheet'[Product Name])
 )
 
+Calendar Table = 
+VAR StartYear = 2018 
+VAR EndYear = 2020   
 
+RETURN
+ADDCOLUMNS(
+    CALENDAR(
+        DATE(StartYear, 1, 1),
+        DATE(EndYear, 12, 31)
+    ),
+    "Year", YEAR([Date]),
+    "Month No.", MONTH([Date]),
+    "Day", DAY([Date]),
+    "Day Name", FORMAT([Date], "DDDD"),
+    "Day Name Short", FORMAT([Date], "DDD"),
+    "Month Name", FORMAT([Date], "MMMM"),
+    "Month Name Short", FORMAT([Date], "MMM"),
+    "Quarter", QUARTER([Date]),
+    "Quarter Name", "Q" & FORMAT([Date], "Q"),
+    "Week of Year", WEEKNUM([Date])
+)
 
 
 
