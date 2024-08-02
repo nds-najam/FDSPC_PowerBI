@@ -38,3 +38,21 @@ Total Sales = sum('Sales Orders Sheet'[Sales Amount])
 CONCATENATE(text1,text2)
 LEFT/RIGHT(Text, [numChars])
 
+# Analyze the % contribution of table lamps sales for different states
+# Find the percentage of table lamp orders having a net profit margin greater than 50%
+# Analyze how table lamps fare against other items in the lighting fixtures category, including floor lamps and candles
+#
+# Filter(<Table>,<FilterExpress>)
+# CALCULATE(<Expr>, <Filter1>, <Filter2>, ...) 
+# ALL removes all the filters: ALL (<TableNameOrColumnName1>,<TableNameOrColumnName2>,...)
+# 
+# 
+
+
+
+
+
+
+
+
+
