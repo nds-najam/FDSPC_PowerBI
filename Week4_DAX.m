@@ -68,3 +68,4 @@ UNION(
     DISTINCT('POS data'[SKU_ID])
 )
 )
+
